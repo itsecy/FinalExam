@@ -1,0 +1,26 @@
+<mat-card class="app-card">
+    <mat-card-content>
+    <mat-card-title>Basic Calculator</mat-card-title>
+   <h1> <mat-divider inset></mat-divider></h1>
+   <p>Input two numbers below.</p>
+    
+        <div class="form-group d-flex flex-row">
+            <h1><input [(ngModel)]='num1' type="number" name="num1" class="form-control"></h1>
+            <input [(ngModel)]='num2'  type="number" name="num2" class="form-control">
+        </div>
+        <br>
+        <div class="d-flex flex-row justify-content-between">
+            <button mat-raised-button color="primary" (click)="add()"> ADD (+) </button>&nbsp;
+            <button mat-raised-button color="primary" (click)="subtract()"> SUBTRACT (-) </button>&nbsp;
+            <button mat-raised-button color="primary" (click)="multiply()"> MULTIPLY (*)</button>&nbsp;
+            <button mat-raised-button color="primary" (click)="divide()"> DIVIDE (/) </button>
+        </div>
+    </mat-card-content>
+    <mat-card-footer>
+        <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+        <h3> The result of {{num1}} and {{num2}} is <b>{{result}}</b>. </h3>
+    </mat-card-footer>
+
+
+</mat-card>
+
